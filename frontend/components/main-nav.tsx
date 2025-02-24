@@ -5,7 +5,7 @@ import { NavItem } from "@/types/nav"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { Icons } from "@/components/icons"
-
+import ConnectButton from "./connectwallet"
 interface MainNavProps {
   items?: NavItem[]
 }
@@ -34,6 +34,7 @@ export function MainNav({ items }: MainNavProps) {
                 </Link>
               )
           )}
+          <ConnectButton />
         </nav>
       ) : null}
     </div>

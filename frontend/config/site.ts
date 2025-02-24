@@ -1,21 +1,13 @@
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: "sBTC Portfolio",
+  name: "Next.js",
   description:
     "Beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open Source.",
   mainNav: [
     {
-      title: "Dashboard",
-      href: "/portfolio",
-    },
-    {
-      title: "Transactions",
-      href: "/portfolio/transactions",
-    },
-    {
-      title: "Settings",
-      href: "/portfolio/settings",
+      title: "Home",
+      href: "/",
     },
   ],
   links: {

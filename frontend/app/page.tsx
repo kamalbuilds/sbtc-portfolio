@@ -1,24 +1,24 @@
-import Link from 'next/link'
-import { Button } from '@/components/ui/button'
-import { ArrowRight, Shield, Zap, LineChart } from 'lucide-react'
+import Link from "next/link"
+import { ArrowRight, LineChart, Shield, Zap } from "lucide-react"
+
+import { Button } from "@/components/ui/button"
+import { Separator } from "@/components/ui/separator"
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b">
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-16 text-center">
-        <h1 className="mb-6 text-5xl font-bold text-gray-900">
-          Track Your sBTC Portfolio
-        </h1>
-        <p className="mx-auto mb-8 max-w-2xl text-lg text-gray-600">
-          Monitor your sBTC positions, manage deposits and withdrawals, and track your
-          performance with our comprehensive portfolio dashboard.
+        <h1 className="mb-6 text-5xl font-bold ">Track Your sBTC Portfolio</h1>
+        <p className="mx-auto mb-8 max-w-2xl text-lg ">
+          Monitor your sBTC positions, manage deposits and withdrawals, and
+          track your performance with our comprehensive portfolio dashboard.
         </p>
         <div className="flex justify-center space-x-4">
           <Link href="/portfolio">
             <Button size="lg">
               Launch App
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-2 size-5" />
             </Button>
           </Link>
           <a
@@ -33,16 +33,18 @@ export default function HomePage() {
         </div>
       </div>
 
+      <Separator />
+
       {/* Features Section */}
-      <div className="bg-white py-16">
+      <div className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="mb-12 text-center text-3xl font-bold text-gray-900">
+          <h2 className="mb-12 text-center text-3xl font-bold ">
             Why Use sBTC?
           </h2>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             <div className="rounded-lg bg-gray-50 p-6 text-center">
-              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-100">
-                <Shield className="h-6 w-6 text-blue-600" />
+              <div className="mx-auto mb-4 flex size-12 items-center justify-center rounded-full bg-blue-100">
+                <Shield className="size-6 text-blue-600" />
               </div>
               <h3 className="mb-2 text-xl font-semibold text-gray-900">
                 100% Bitcoin Finality
@@ -54,8 +56,8 @@ export default function HomePage() {
             </div>
 
             <div className="rounded-lg bg-gray-50 p-6 text-center">
-              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-green-100">
-                <Zap className="h-6 w-6 text-green-600" />
+              <div className="mx-auto mb-4 flex size-12 items-center justify-center rounded-full bg-green-100">
+                <Zap className="size-6 text-green-600" />
               </div>
               <h3 className="mb-2 text-xl font-semibold text-gray-900">
                 Fast Deposits
@@ -67,15 +69,15 @@ export default function HomePage() {
             </div>
 
             <div className="rounded-lg bg-gray-50 p-6 text-center">
-              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-purple-100">
-                <LineChart className="h-6 w-6 text-purple-600" />
+              <div className="mx-auto mb-4 flex size-12 items-center justify-center rounded-full bg-purple-100">
+                <LineChart className="size-6 text-purple-600" />
               </div>
               <h3 className="mb-2 text-xl font-semibold text-gray-900">
                 DeFi Integration
               </h3>
               <p className="text-gray-600">
                 Use your sBTC in various DeFi protocols on the Stacks blockchain
-                while maintaining Bitcoin's security.
+                while maintaining Bitcoin&apos;s security.
               </p>
             </div>
           </div>
@@ -99,18 +101,18 @@ export default function HomePage() {
               className="bg-white text-blue-600 hover:bg-blue-50"
             >
               Launch Portfolio Dashboard
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-2 size-5" />
             </Button>
           </Link>
         </div>
       </div>
 
       {/* Footer */}
-      <footer className="bg-gray-900 py-12 text-gray-400">
+      <footer className="py-12 ">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             <div>
-              <h3 className="mb-4 text-lg font-semibold text-white">Resources</h3>
+              <h3 className="mb-4 text-lg font-semibold ">Resources</h3>
               <ul className="space-y-2">
                 <li>
                   <a
@@ -146,7 +148,9 @@ export default function HomePage() {
             </div>
 
             <div>
-              <h3 className="mb-4 text-lg font-semibold text-white">Community</h3>
+              <h3 className="mb-4 text-lg font-semibold text-white">
+                Community
+              </h3>
               <ul className="space-y-2">
                 <li>
                   <a
@@ -199,7 +203,9 @@ export default function HomePage() {
           </div>
 
           <div className="mt-8 border-t border-gray-800 pt-8 text-center">
-            <p>© {new Date().getFullYear()} sBTC Portfolio. All rights reserved.</p>
+            <p>
+              © {new Date().getFullYear()} sBTC Portfolio. All rights reserved.
+            </p>
           </div>
         </div>
       </footer>
